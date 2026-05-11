@@ -149,7 +149,7 @@ pub mod http;
 ///
 /// This modules provides wrappers and utilities to NGINX stream APIs, such as session,
 /// configuration access.
-#[cfg(ngx_feature = "stream")]
+#[cfg(all(feature = "stream", ngx_feature = "stream"))]
 pub mod stream;
 
 /// The log module.
